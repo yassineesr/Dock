@@ -32,7 +32,7 @@ public class ClientController {
     // Endpoint pour supprimer un client par ID
     @DeleteMapping("/{userId}")
     public ResponseEntity<Void> deleteClient(@PathVariable Long userId) {
-        clientService.SupprimerClient(userId);
+        clientService.supprimerClient(userId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
@@ -44,14 +44,14 @@ public class ClientController {
     @GetMapping("/{pagenumber}/{pagesize}")
     public Page<Client> eventsPages(@PathVariable int pagenumber, @PathVariable int pagesize)
     {
-        return clientService.AllClientPaginations(pagenumber, pagesize);
+        return clientService.allClientPaginations(pagenumber, pagesize);
 
     }
 
     @PutMapping
-    public ResponseEntity<Client> modifierEvent(@RequestBody Client Event)
+    public ResponseEntity<Client> modifierClient(@RequestBody Client client)
     {
-        Client modifierClient = clientService.modifierClient(Event);
+        Client modifierClient = clientService.modifierClient(client);
         if (modifierClient != null)
         {
             return ResponseEntity.ok(modifierClient);

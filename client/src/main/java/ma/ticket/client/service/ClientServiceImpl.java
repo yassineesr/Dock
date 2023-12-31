@@ -46,7 +46,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void SupprimerClient(Long id) {
+    public void supprimerClient(Long id) {
         clientRepository.deleteById(id);
     }
 
@@ -56,7 +56,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Page<Client> AllClientPaginations(int pagenumber, int pagesize) {
+    public Page<Client> allClientPaginations(int pagenumber, int pagesize) {
         Pageable pageable = PageRequest.of(pagenumber, pagesize);
         return clientRepository.findAll(pageable);
     }

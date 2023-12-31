@@ -12,11 +12,11 @@ public interface ClientService {
 
     Client  modifierClient(Client v);
 
-    public void SupprimerClient(Long id);
+    public void supprimerClient(Long id);
 
     public Client findClient(Long id);
 
-    public Page<Client> AllClientPaginations(int pagenumber, int pagesize  );
+    public Page<Client> allClientPaginations(int pagenumber, int pagesize  );
 
 
     

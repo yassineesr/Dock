@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin")
+@CrossOrigin(origins = "*")
 public class AdminController {
     @Autowired
     private AdminServiceImpl adminService;
@@ -32,5 +33,10 @@ public class AdminController {
     public ResponseEntity<Void> deleteAdmin(@PathVariable int userId) {
         adminService.SupprimerAdmin(userId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+    @GetMapping("/exist/{username}/{mdp}")
+    public ResponseEntity<Boolean> existAdmin(@PathVariable String username, @PathVariable String mdp) {
+        boolean exists = adminService.ExistAdmin(username, mdp);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 }

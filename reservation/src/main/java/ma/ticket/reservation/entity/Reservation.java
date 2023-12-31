@@ -15,7 +15,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idReservation;
 
-    private Long nbTickets;
+    private Long nbTicket;
 
     private Long idClient;
 

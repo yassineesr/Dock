@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 public class ReservationResponse {
     private  Long idReservation;
 
-    private Long nbTickets;
+    private Long nbTicket;
 
     private Client client;
 

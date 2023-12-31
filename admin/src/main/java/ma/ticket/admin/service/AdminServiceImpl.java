@@ -32,10 +32,8 @@ public class AdminServiceImpl implements AdminService{
         {
             Admin c= r.get();
 
-            c.setEmail(v.getEmail());
+            c.setUsername(v.getUsername());
             c.setMdp(v.getMdp());
-            c.setTel(v.getTel());
-            c.setTel(v.getTel());
             adminRepository.save(c);
 
         }
@@ -47,8 +45,8 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public boolean ExistAdmin(String email, String mdp) {
-
-        return false;
+    public boolean ExistAdmin(String username, String mdp) {
+        Optional<Admin> adminOptional = adminRepository.findByUsernameAndMdp(username, mdp);
+        return adminOptional.isPresent();
     }
 }

@@ -77,7 +77,7 @@ public class ReservationService {
 
         return ReservationResponse.builder()
                 .idReservation(reservation.getIdReservation())
-                .nbTickets(reservation.getNbTickets())
+                .nbTicket(reservation.getNbTicket())
                 .client(foundClient)
                 .event(foundEvent)
                 .build();
@@ -90,7 +90,7 @@ public class ReservationService {
         try {
             // Example:
             Reservation newReservation = new Reservation();
-            newReservation.setNbTickets(reservationResponse.getNbTickets());
+            newReservation.setNbTicket(reservationResponse.getNbTicket());
             newReservation.setIdClient(reservationResponse.getClient().getIdClient());
             newReservation.setIdEvenet(reservationResponse.getEvent().getIdEvent());
 
@@ -163,7 +163,7 @@ public class ReservationService {
                     .orElseThrow(() -> new NotFoundException("Reservation not found for the provided id"));
 
             // Update the existing car entity with the new data
-            existingReservation.setNbTickets(updatedReservation.getNbTickets());
+            existingReservation.setNbTicket(updatedReservation.getNbTicket());
             existingReservation.setIdEvenet(updatedReservation.getIdEvenet());
             existingReservation.setIdClient(updatedReservation.getIdClient()); // Assuming you have a getClientId() method in Reservation
 

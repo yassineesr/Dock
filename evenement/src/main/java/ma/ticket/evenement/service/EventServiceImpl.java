@@ -61,7 +61,7 @@ public class EventServiceImpl implements EventService{
     }
 
     @Override
-    public Page<Event> AllEventsPaginations(int pagenumber, int pagesize) {
+    public Page<Event> allEventsPaginations(int pagenumber, int pagesize) {
         Pageable pageable = PageRequest.of(pagenumber, pagesize);
         return eventRepository.findAll(pageable);
     }

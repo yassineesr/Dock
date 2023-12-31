@@ -13,7 +13,7 @@ public interface EventService {
     public boolean supprimerEvent(Long id);
 
     public List<Event> listEvent();
-    public Page<Event> AllEventsPaginations(int pagenumber, int pagesize  );
+    public Page<Event> allEventsPaginations(int pagenumber, int pagesize  );
 
     public  Event findEvent(Long id);
 

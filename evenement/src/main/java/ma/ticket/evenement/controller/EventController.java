@@ -25,9 +25,9 @@ public class EventController {
     }
 
     @PutMapping("/modifier")
-    public ResponseEntity<Event> modifierEvent(@RequestBody Event Event)
+    public ResponseEntity<Event> modifierEvent(@RequestBody Event event)
     {
-        Event enregistrerEvent = eventService.modifierEvent(Event);
+        Event enregistrerEvent = eventService.modifierEvent(event);
         if (enregistrerEvent != null)
         {
             return ResponseEntity.ok(enregistrerEvent);
@@ -48,7 +48,7 @@ public class EventController {
     @GetMapping("/all/{pagenumber}/{pagesize}")
     public Page<Event> eventsPages(@PathVariable int pagenumber, @PathVariable int pagesize)
     {
-        return eventService.AllEventsPaginations(pagenumber, pagesize);
+        return eventService.allEventsPaginations(pagenumber, pagesize);
 
     }
 

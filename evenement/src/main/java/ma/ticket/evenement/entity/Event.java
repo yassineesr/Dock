@@ -17,14 +17,14 @@ import java.time.LocalDate;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEvent;
-    private String nom;
-    private String lieu;
-    private String description;
-    private String type;
-    private Long nbTicket;
-    private double prix;
-    private LocalDate date;
+     Long idEvent;
+     String nom;
+     String lieu;
+     String description;
+     String type;
+     Long nbTicket;
+     double prix;
+     LocalDate date;
 
 
 }

@@ -29,7 +29,6 @@ findClientgma.ticket.client.service.ClientServiceImpl#findClient(Ljava/lang/Lon
 ,ma.ticket.client.controller.ClientController@
 <init>6ma.ticket.client.controller.ClientController#<init>()Vq
 findCltfma.ticket.client.controller.ClientController#findClt(Ljava/lang/Long;)Lma/ticket/client/entity/Client;]
-getAllClientsLma.ticket.client.controller.ClientController#getAllClients()Ljava/util/List;java.lang.Object Á
+getAllClientsLma.ticket.client.controller.ClientController#getAllClients()Ljava/util/List;java.lang.Object x
 'ma.ticket.client.ClientApplicationTests;
-<init>1ma.ticket.client.ClientApplicationTests#<init>()VG
-contextLoads7ma.ticket.client.ClientApplicationTests#contextLoads()Vjava.lang.Object
+<init>1ma.ticket.client.ClientApplicationTests#<init>()Vjava.lang.Object

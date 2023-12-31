@@ -31,12 +31,12 @@ public class AdminController {
     // Endpoint pour supprimer un admin par ID
     @DeleteMapping("/{userId}")
     public ResponseEntity<Void> deleteAdmin(@PathVariable int userId) {
-        adminService.SupprimerAdmin(userId);
+        adminService.supprimerAdmin(userId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/exist/{username}/{mdp}")
     public ResponseEntity<Boolean> existAdmin(@PathVariable String username, @PathVariable String mdp) {
-        boolean exists = adminService.ExistAdmin(username, mdp);
+        boolean exists = adminService.existAdmin(username, mdp);
         return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 }

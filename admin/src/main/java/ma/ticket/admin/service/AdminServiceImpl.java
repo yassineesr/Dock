@@ -40,12 +40,12 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public void SupprimerAdmin(int id) {
+    public void supprimerAdmin(int id) {
         adminRepository.deleteById(id);
     }
 
     @Override
-    public boolean ExistAdmin(String username, String mdp) {
+    public boolean existAdmin(String username, String mdp) {
         Optional<Admin> adminOptional = adminRepository.findByUsernameAndMdp(username, mdp);
         return adminOptional.isPresent();
     }

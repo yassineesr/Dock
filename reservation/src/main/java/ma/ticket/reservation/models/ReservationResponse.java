@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @NoArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200")
 public class ReservationResponse {
-    private  Long idReservation;
+      Long idReservation;
 
-    private Long nbTicket;
+     Long nbTicket;
 
-    private Client client;
+     Client client;
 
-    private Event event;
+     Event event;
 
 }

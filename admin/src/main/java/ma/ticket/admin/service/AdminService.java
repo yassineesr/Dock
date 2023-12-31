@@ -11,7 +11,7 @@ public interface AdminService {
 
     void  modifierAdmin(Admin v);
 
-    public void SupprimerAdmin(int id);
+    public void supprimerAdmin(int id);
 
-    public boolean ExistAdmin(String email ,String mdp);
+    public boolean existAdmin(String email , String mdp);
 }

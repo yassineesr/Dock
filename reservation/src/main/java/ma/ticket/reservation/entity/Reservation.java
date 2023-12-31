@@ -13,13 +13,13 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idReservation;
+     Long idReservation;
 
-    private Long nbTicket;
+     Long nbTicket;
 
-    private Long idClient;
+     Long idClient;
 
-    private Long idEvenet;
+     Long idEvenet;
 
 
 }

@@ -28,14 +28,13 @@ public class ReservationService {
     @Autowired
    private RestTemplate restTemplate;
 
-    private final String URL = "http://localhost:8888/MICROSERVICE-CLIENT";
-    private final String URL1 = "http://localhost:8888/MICROSERVICE-EVENT";
+    private static final String GET_FURL = "http://localhost:8888/MICROSERVICE-CLIENT";
+    private static final String GET_SURL = "http://localhost:8888/MICROSERVICE-EVENT";
 
    public List<ReservationResponse> findAll() {
         List<Reservation> cars = reservationRepository.findAll();
-        //Pageable pageable = PageRequest.of(pagenumber, pagesize);
-        ResponseEntity<Client[]> response = restTemplate.getForEntity(this.URL + "/api/client/list", Client[].class);
-        ResponseEntity<Event[]> response1 = restTemplate.getForEntity(this.URL1 + "/api/event", Event[].class);
+        ResponseEntity<Client[]> response = restTemplate.getForEntity(GET_FURL + "/api/client/list", Client[].class);
+        ResponseEntity<Event[]> response1 = restTemplate.getForEntity(GET_SURL + "/api/event", Event[].class);
 
         Client[] clients = response.getBody();
         Event[] events = response1.getBody();
@@ -49,8 +48,8 @@ public class ReservationService {
             Pageable pageable = PageRequest.of(pageNumber, pageSize);
             Page<Reservation> reservationsPage = reservationRepository.findAll(pageable);
 
-            ResponseEntity<Client[]> response = restTemplate.getForEntity(URL + "/api/client/list", Client[].class);
-            ResponseEntity<Event[]> response1 = restTemplate.getForEntity(URL1 + "/api/event", Event[].class);
+            ResponseEntity<Client[]> response = restTemplate.getForEntity(GET_FURL + "/api/client/list", Client[].class);
+            ResponseEntity<Event[]> response1 = restTemplate.getForEntity(GET_SURL + "/api/event", Event[].class);
 
             Client[] clients = response.getBody();
             Event[] events = response1.getBody();
@@ -116,7 +115,7 @@ public class ReservationService {
 
     private Client findClientById(Long clientId) {
         try {
-            return restTemplate.getForObject(this.URL + "/api/client/" + clientId, Client.class);
+            return restTemplate.getForObject(GET_FURL + "/api/client/" + clientId, Client.class);
         } catch (HttpClientErrorException.NotFound e) {
             // Handle the case where the client is not found
             throw new NotFoundException("Client not found for the provided client_id");
@@ -129,7 +128,7 @@ public class ReservationService {
     }
     private Event findEventById(Long eventId) {
         try {
-            return restTemplate.getForObject(this.URL1 + "/api/event/" + eventId, Event.class);
+            return restTemplate.getForObject(GET_SURL + "/api/event/" + eventId, Event.class);
         } catch (HttpClientErrorException.NotFound e) {
             // Handle the case where the client is not found
             throw new NotFoundException("Client not found for the provided event_id");

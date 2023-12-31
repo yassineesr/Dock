@@ -15,9 +15,9 @@ public class Admin {
 
     @Id
     @GeneratedValue
-    private int idAdmin;
-    private String username;
-    private String mdp;
+     int idAdmin;
+     String username;
+     String mdp;
 
 
 }

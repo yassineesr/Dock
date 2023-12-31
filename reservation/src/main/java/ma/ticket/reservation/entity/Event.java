@@ -10,13 +10,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Event {
-    private Long idEvent;
-    private String nom;
-    private String lieu;
-    private String description;
-    private String type;
-    private Long nbTicket;
-    private double prix;
-    private LocalDate date;
+     Long idEvent;
+     String nom;
+     String lieu;
+     String description;
+     String type;
+     Long nbTicket;
+     double prix;
+     LocalDate date;
 
 }

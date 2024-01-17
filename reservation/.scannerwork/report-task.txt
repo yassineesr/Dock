@@ -1,7 +1,7 @@
-organization=othmane
-projectKey=othmane_reservation
+organization=yassineesr
+projectKey=yassineesr_reservation
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.51767
-dashboardUrl=https://sonarcloud.io/dashboard?id=othmane_reservation
-ceTaskId=AYzAyL8Kw9aIP1mwWZ8L
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYzAyL8Kw9aIP1mwWZ8L
+dashboardUrl=https://sonarcloud.io/dashboard?id=yassineesr_reservation
+ceTaskId=AYzBFlvLGNv59YaPxMtO
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYzBFlvLGNv59YaPxMtO
